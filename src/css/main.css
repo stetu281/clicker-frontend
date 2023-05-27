@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "roboto-regular";
+  src: url(../assets/fonts/Roboto-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "roboto-semi";
+  src: url(../assets/fonts/Roboto-Medium.ttf);
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "roboto-bold";
+  src: url(../assets/fonts/Roboto-Black.ttf);
+  font-style: normal;
+  font-weight: 900;
+}
+
+@layer components {
+  .title-h2 {
+    @apply font-roboto_bold text-2xl;
+  }
+
+  .title-h3 {
+    @apply font-roboto_semi text-xl;
+  }
+
+  .box {
+    @apply p-8 bg-primary bg-opacity-20 rounded-xl text-center;
+  }
+
+  .topClickers li {
+    @apply flex justify-between py-3 border-b-2 last-of-type:border-b-0 border-border;
+  }
+
+  .topClickers li span {
+    @apply last-of-type:text-primary last-of-type:font-roboto_bold;
+  }
+
+  #clickField {
+    user-select: none;
+  }
+}

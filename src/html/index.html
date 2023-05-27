@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="font-roboto_regular text-dark">
+    <header
+      class="py-8 mx-auto w-11/12 max-w-[1535px] flex items-center justify-between"
+    >
+      <h1 class="font-roboto_bold text-4xl text-center">Clicker</h1>
+      <a
+        href="https://stefanturner.ch"
+        class="px-4 py-2 border-2 border-button rounded-md text-button font-roboto_semi"
+        >My Portfolio</a
+      >
+    </header>
+    <main class="pb-8 mx-auto w-11/12 max-w-[1535px] flex justify-center">
+      <div
+        class="w-full grid gap-5 md:grid-cols-2 lg:grid-cols-[5fr_3fr_4fr] lg:grid-rows-[auto_auto]"
+      >
+        <div
+          id="clickField"
+          class="flex justify-center items-center w-full h-48 bg-primary rounded-xl md:h-auto"
+        >
+          <p class="pointer-events-none font-roboto_semi text-2xl">
+            Click in this Field
+          </p>
+        </div>
+        <div class="box">
+          <h2 class="title-h2">Your Clicks</h2>
+          <p
+            class="currentClicks mt-4 inline-block px-8 py-5 border-primary border-2 rounded-md font-roboto_bold text-3xl"
+          >
+            0
+          </p>
+          <form class="mt-8 flex items-center flex-col">
+            <label for="name" class="font-bold"
+              >Your Name <span class="opacity-60">(max. 16 chars)</span></label
+            >
+            <div class="inputError hidden border-2 p-4 my-4">
+              <h3 class="font-roboto_semi text-error">
+                Please Resolve following errors:
+              </h3>
+              <ul class="errorList"></ul>
+            </div>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="nameInput px-4 py-2 w-full border-2 border-primary rounded"
+            />
+            <button
+              type="button"
+              class="submit mt-4 px-8 py-2 bg-primary rounded-md font-roboto_semi text-base"
+            >
+              Submit your Clicks
+            </button>
+          </form>
+        </div>
+
+        <div class="box md:col-span-2">
+          <h2 class="title-h2">Statistics</h2>
+          <div
+            class="mt-4 flex flex-col gap-8 md:flex-row md:justify-around md:mt-8"
+          >
+            <div>
+              <h3 class="title-h3">First Clicks added</h3>
+              <p class="text-textGreen">by Stef281<br />6. May 2023</p>
+            </div>
+            <div>
+              <h3 class="title-h3">All Time Clicks</h3>
+              <p class="text-textGreen">
+                <span class="totalClicks"></span> Clicks<br />by
+                <span class="numClickers"></span> Clickers
+              </p>
+            </div>
+            <div class="latestClicks">
+              <h3 class="title-h3">Latest Clicks added</h3>
+              <p class="text-textGreen">
+                <span class="num"></span> Clicks added by
+                <span class="name"></span><br /><span class="date"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="box md:col-span-2 lg:col-start-3 lg:row-start-1 lg:row-span-2"
+        >
+          <h2 class="title-h2">Top Clickers</h2>
+          <p
+            class="mt-6 mx-auto max-w-[880px] flex justify-between font-roboto_bold"
+          >
+            <span>Name</span><span>Clicks</span>
+          </p>
+          <ul class="topClickers w-full max-w-[880px] mx-auto mt-2"></ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
