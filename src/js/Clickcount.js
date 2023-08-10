@@ -17,8 +17,8 @@ export const ClickCount = async () => {
     document.querySelector(".inputError").classList.add("hidden");
     document.querySelector(".errorList").innerHTML = "";
 
-    if (counter < 20) {
-      errorHandling([{ msg: "Please provide at least 20 clicks" }]);
+    if (counter <= 20) {
+      errorHandling([{ msg: "Please provide more than 20 clicks" }]);
     } else {
       formData.playername = nameInput.value;
       formData.score = counter;

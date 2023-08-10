@@ -1,5 +1,5 @@
 import { errorHandling } from "./errorhandling";
-const url = "http://localhost:8888";
+const url = "https://stef281clicker.netlify.app/";
 
 export const getData = async (endpoint) => {
   try {
@@ -18,7 +18,7 @@ export const postScore = async (data) => {
   document.querySelector(".inputError").classList.add("hide");
   document.querySelector(".errorList").innerHTML = "";
 
-  const response = await fetch(`${url}/scores`, {
+  const response = await fetch(`${url}/`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
@@ -50,7 +50,6 @@ export const updateStats = async (data) => {
     lastClickName: data.playername,
     lastClickNum: data.score,
   };
-  console.log(newStats);
 
   try {
     const response = await fetch(`${url}/stats`, {

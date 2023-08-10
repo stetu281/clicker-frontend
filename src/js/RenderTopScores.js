@@ -3,7 +3,7 @@ import { getData } from "./tools/fetch";
 export const RenderTopScores = async () => {
   const list = document.querySelector(".topClickers");
   list.innerHTML = "";
-  const scores = await getData("/scores/top");
+  const scores = await getData("/scores/10");
   scores.forEach((score) => {
     const li = document.createElement("li");
     li.innerHTML = `<span>${score.playername}</span><span>${score.score}</span>`;

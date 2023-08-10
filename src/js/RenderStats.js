@@ -1,8 +1,8 @@
 import { getData } from "./tools/fetch";
 
 export const RenderStats = async () => {
-  const { stats } = await getData("/stats");
-  const sts = stats[0];
+  const stats = await getData("/stats");
+  const sts = stats.stats[0];
   document.querySelector(".totalClicks").innerText = sts.allTimeClicks;
   document.querySelector(".numClickers").innerText = sts.allTimePlayers;
   document.querySelector(".num").innerText = sts.lastClickNum;
